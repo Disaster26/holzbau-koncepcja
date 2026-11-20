@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kładki drewniane i mosty z drewna klejonego | Holzbau</title><meta name="description" content="Kładki dla pieszych i mosty z drewna klejonego warstwowo: projekt z fundamentami i łożyskami, dostawa i montaż. Realizacje m.in. w Brodnicy, Bytomiu, Gryficach."><meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/archivo-rdzen.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" as="image" href="img/kladka-w-brodnicy-ii-1.webp" imagesrcset="img/kladka-w-brodnicy-ii-1-s.webp 560w, img/kladka-w-brodnicy-ii-1.webp 1024w" imagesizes="100vw" fetchpriority="high">
+<style>@font-face{font-family:"Archivo";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/archivo-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2026}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/archivo-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Archivo-fb";src:local("Arial");size-adjust:102%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
+:root{--or:#F9931D;--or2:#E8820B;--gr:#00876F;--gr2:#00705C;--ink:#1B2023;--tx:#2C3337;--mu:#57626A;--bg2:#EEF1F2;--line:#D8DEE1;--w:1240px;--cut:22px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;font:400 17px/1.6 "Archivo","Archivo-fb",Arial,sans-serif;color:var(--tx);background:#fff;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-weight:700;color:var(--ink);line-height:1.12;letter-spacing:-.015em;margin:0 0 .5em}
+h2{font-size:clamp(1.75rem,3.2vw,2.6rem)}
+h3{font-size:1.2rem;letter-spacing:-.005em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px}
+/* nagłówek */
+.top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--gr)}
+.logo .mark{width:38px;height:38px;flex:none}
+.logo span{font-weight:700;font-size:1.65rem;letter-spacing:-.02em;line-height:1}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{position:relative;text-decoration:none;font-weight:600;font-size:.98rem;color:var(--ink);padding:10px 12px}
+.nav a:hover{color:var(--gr)}
+.nav a[aria-current=page]{color:var(--gr)}
+.nav a[aria-current=page]::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:4px;background:var(--or);clip-path:polygon(0 0,100% 0,calc(100% - 4px) 100%,0 100%)}
+.tel-top{display:inline-flex;align-items:center;gap:8px;margin-left:10px;padding:10px 18px 10px 16px;background:var(--ink);color:#fff!important;text-decoration:none;font-weight:600;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.tel-top:hover{background:var(--gr)}
+.burger{display:none;width:46px;height:46px;border:0;background:none;padding:10px;cursor:pointer;margin-right:-10px}
+.burger i{display:block;height:3px;background:var(--ink);margin:6px 0;transition:transform .2s}
+.burger i:nth-child(2){width:70%;margin-left:auto}
+@media (max-width:960px){
+ .top .wrap{height:64px}
+ .burger{display:block}
+ .nav{position:fixed;left:0;right:0;top:64px;bottom:0;background:#fff;flex-direction:column;align-items:stretch;padding:12px 20px 28px;gap:0;transform:translateX(100%);transition:transform .25s ease;overflow:auto;visibility:hidden}
+ .nav.open{transform:none;visibility:visible}
+ .nav a{font-size:1.35rem;padding:16px 4px;border-bottom:1px solid var(--line)}
+ .nav a[aria-current=page]::after{left:4px;right:auto;width:46px;bottom:8px}
+ .tel-top{margin:22px 0 0;justify-content:center;font-size:1.1rem;padding:16px}
+ .burger[aria-expanded=true] i:nth-child(1){transform:translateY(9px) rotate(45deg)}
+ .burger[aria-expanded=true] i:nth-child(2){opacity:0}
+ .burger[aria-expanded=true] i:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+ .logo .mark{width:34px;height:34px}.logo span{font-size:1.5rem}
+}
+/* przyciski: krawędź ścięta pod kątem belki z logo */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 34px 14px 24px;font-family:inherit;font-weight:700;font-size:1.02rem;line-height:1.2;text-decoration:none;border:0;cursor:pointer;background:var(--or);color:var(--ink);clip-path:polygon(0 0,100% 0,calc(100% - 16px) 100%,0 100%);transition:background .15s}
+.btn:hover{background:#FFA537}
+.btn.dark{background:var(--ink);color:#fff}.btn.dark:hover{background:#000}
+.btn.white{background:#fff;color:var(--ink)}.btn.white:hover{background:#FFE7C7}
+.arrow{width:18px;height:12px;flex:none}
+.tlink{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:600;font-size:1.05rem;padding:12px 2px}
+.tlink b{font-weight:700;font-size:1.2rem}
+/* hero */
+.hero{position:relative;color:#fff;background:#2a2620;display:flex;align-items:flex-end;min-height:calc(100svh - 72px);clip-path:polygon(0 0,100% 0,100% calc(100% - 70px),calc(100% - 26px) 100%,0 100%)}
+.hero>img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(13,15,16,.62) 0%,rgba(13,15,16,.25) 55%,rgba(13,15,16,0) 80%),linear-gradient(0deg,rgba(13,15,16,.9) 0%,rgba(13,15,16,.6) 38%,rgba(13,15,16,.12) 72%,rgba(13,15,16,0) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:64px}
+.hero h1{color:#fff;font-size:clamp(2rem,4.6vw,3.9rem);max-width:17ch;margin-bottom:20px;letter-spacing:-.025em}
+.hero .lead{font-size:clamp(1.04rem,1.4vw,1.22rem);max-width:44ch;color:rgba(255,255,255,.9);margin-bottom:30px}
+.hero .acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px}
+.hero .cap{position:absolute;z-index:2;right:40px;bottom:28px;font-size:.86rem;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:8px}
+.hero .cap .mark{width:16px;height:16px}
+@media (max-width:960px){.hero{min-height:calc(100svh - 64px)}}
+@media (max-width:700px){
+ .hero{clip-path:polygon(0 0,100% 0,100% calc(100% - 40px),calc(100% - 15px) 100%,0 100%)}
+ .hero>img{object-position:50% 20%}
+ .hero::before{background:linear-gradient(0deg,rgba(13,15,16,.94) 0%,rgba(13,15,16,.8) 45%,rgba(13,15,16,.25) 78%,rgba(13,15,16,.1) 100%)}
+ .hero .wrap{padding-top:90px;padding-bottom:62px}
+ .hero h1{font-size:clamp(1.85rem,8.4vw,2.4rem);margin-bottom:14px}
+ .hero .lead{margin-bottom:24px;font-size:1rem}
+ .hero .acts{gap:6px 22px}
+ .hero .cap{right:auto;left:20px;bottom:18px;font-size:.78rem}
+}
+/* belka - separator z motywem logo */
+.beam{display:block;height:10px;width:120px;margin:0 0 26px;background:linear-gradient(90deg,var(--or) 0 58%,transparent 58% 66%,var(--gr) 66% 100%);clip-path:polygon(4px 0,100% 0,calc(100% - 4px) 100%,0 100%)}
+section{position:relative}
+.sec{padding:clamp(64px,8vw,112px) 0}
+.grey{background:var(--bg2)}
+/* wstęp */
+.intro{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,90px);align-items:start}
+.intro .big{font-size:clamp(1.55rem,2.6vw,2.15rem);line-height:1.25;font-weight:600;color:var(--ink);letter-spacing:-.015em;margin:0}
+.intro .big em{font-style:normal}
+.places{columns:2;column-gap:28px;margin:18px 0 0;padding:0;list-style:none;font-size:.98rem}
+.places li{break-inside:avoid;padding:5px 0 5px 22px;position:relative}
+.tri li,.places li{position:relative}
+.places li::before,.tri li::before{content:"";position:absolute;left:0;top:.62em;width:11px;height:9px;background:var(--gr);clip-path:polygon(0 0,100% 0,50% 100%)}
+.tri{list-style:none;padding:0;margin:0 0 1em}
+.tri li{padding:6px 0 6px 24px}
+@media (max-width:860px){.intro{grid-template-columns:1fr}.places{columns:1}}
+/* zakres */
+.scope{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:34px;border-top:4px solid var(--ink)}
+.scope div{padding:22px 22px 6px 0;border-right:1px solid var(--line);margin-right:22px}
+.scope div:last-child{border-right:0;margin-right:0}
+.scope h3{font-size:1.08rem;margin-bottom:8px}
+.scope p{font-size:.95rem;color:var(--mu);margin:0}
+@media (max-width:960px){.scope{grid-template-columns:1fr 1fr}.scope div{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding:18px 18px 16px 0}}
+@media (max-width:560px){.scope{grid-template-columns:1fr}}
+/* kafle oferty */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.tile{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;color:#fff;text-decoration:none;background:#333;clip-path:polygon(0 0,calc(100% - 36px) 0,100% 36px,100% 100%,0 100%)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.tile:hover img{transform:scale(1.04)}
+.tile::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(0deg,rgba(12,14,15,.88) 0%,rgba(12,14,15,.35) 50%,rgba(12,14,15,0) 75%)}
+.tile .in{z-index:1;position:absolute;left:0;right:0;bottom:0;padding:26px;z-index:1}
+.tile h3{color:#fff;font-size:1.5rem;margin-bottom:8px}
+.tile p{font-size:.97rem;color:rgba(255,255,255,.88);margin:0 0 14px}
+.tile .go{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--or)}
+@media (max-width:900px){.tiles{grid-template-columns:1fr}.tile{aspect-ratio:16/11}}
+/* ciemna sekcja realizacji */
+.dark{background:var(--ink);color:#C9D0D4}
+.dark h2{color:#fff}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.head p{max-width:52ch;margin:0}
+.ctrl{display:flex;gap:10px}
+.ctrl button{width:52px;height:52px;border:2px solid rgba(255,255,255,.35);background:none;color:#fff;cursor:pointer;display:grid;place-items:center}
+.ctrl button:hover{border-color:var(--or);color:var(--or)}
+.ctrl svg{width:20px;height:14px}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:34px;padding:0 0 18px;scroll-padding-inline:max(20px,calc((100vw - var(--w))/2 + 20px));scrollbar-width:thin;scrollbar-color:#4a5257 transparent;cursor:grab;-webkit-overflow-scrolling:touch}
+.rail.drag{cursor:grabbing;scroll-snap-type:none}
+.rail.drag *{pointer-events:none}
+.rail::-webkit-scrollbar{height:6px}.rail::-webkit-scrollbar-thumb{background:#4a5257}
+.rail .card{flex:0 0 min(78vw,400px);scroll-snap-align:start;color:#fff;text-decoration:none}
+.rail .card:first-child{margin-left:max(20px,calc((100vw - var(--w))/2 + 20px))}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:#2b3236;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,0 100%)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card h3{color:inherit;font-size:1.08rem;margin:14px 0 4px;line-height:1.3}
+.card small{color:#9AA5AB;font-size:.88rem}
+.more{margin-top:30px}
+/* drewno - fakty */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.split .ph{position:relative;clip-path:polygon(0 0,100% 0,100% calc(100% - 44px),calc(100% - 44px) 100%,0 100%)}
+.split .ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.split.rev .ph{order:2}
+@media (max-width:860px){.split{grid-template-columns:1fr}.split.rev .ph{order:0}}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px;margin:22px 0 32px}
+.facts div{border-top:3px solid var(--or);padding-top:12px}
+.facts b{display:block;color:var(--ink);font-size:1.06rem;margin-bottom:4px}
+.facts span{font-size:.95rem;color:var(--mu)}
+@media (max-width:480px){.facts{grid-template-columns:1fr}}
+/* kontakt - zielona sekcja */
+.green{background:var(--gr);color:#E6F4F1}
+.green h2{color:#fff}
+.cta{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.people{display:grid;gap:14px}
+.person{display:flex;justify-content:space-between;align-items:center;gap:16px;background:rgba(0,0,0,.16);padding:18px 22px;text-decoration:none;color:#fff;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:background .15s}
+.person:hover{background:rgba(0,0,0,.3)}
+.person small{display:block;color:#BFE3DA;font-size:.88rem}
+.person b{font-size:1.3rem;white-space:nowrap}
+@media (max-width:860px){.cta{grid-template-columns:1fr}}
+@media (max-width:420px){.person{flex-direction:column;align-items:flex-start;gap:2px}}
+/* podstrony */
+.phero{position:relative;color:#fff;background:#2a2620;min-height:clamp(320px,46vh,480px);display:flex;align-items:flex-end;clip-path:polygon(0 0,100% 0,100% calc(100% - 50px),calc(100% - 19px) 100%,0 100%)}
+.phero>img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover}
+.phero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(13,15,16,.9) 0%,rgba(13,15,16,.5) 55%,rgba(13,15,16,.15) 100%)}
+.phero .wrap{position:relative;z-index:2;width:100%;padding-top:80px;padding-bottom:58px}
+.phero h1{color:#fff;font-size:clamp(1.9rem,4vw,3.3rem);max-width:22ch;margin-bottom:12px}
+.phero p{max-width:56ch;color:rgba(255,255,255,.9);margin:0;font-size:1.06rem}
+.crumb{font-size:.88rem;color:rgba(255,255,255,.75);margin-bottom:14px}
+.crumb a{text-decoration:none}.crumb a:hover{text-decoration:underline}
+.prose{max-width:70ch}
+.prose p{font-size:1.06rem}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px)}
+@media (max-width:860px){.cols2{grid-template-columns:1fr}}
+/* galeria siatka */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}
+.gal a{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;background:#dfe4e6}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal a:hover img{transform:scale(1.05)}
+@media (max-width:900px){.gal{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.gal{grid-template-columns:1fr 1fr;gap:6px}}
+/* realizacje - siatka */
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.jump a{text-decoration:none;font-weight:600;font-size:.95rem;padding:9px 16px;background:#fff;border:1px solid var(--line);color:var(--ink)}
+.jump a:hover{border-color:var(--ink)}
+@media (max-width:640px){.jump{gap:6px}.jump a{font-size:.86rem;padding:7px 11px}}
+.group{padding-top:56px}
+.group h2{font-size:clamp(1.45rem,2.4vw,1.9rem);display:flex;align-items:baseline;gap:14px}
+.group h2 small{font-size:.95rem;color:var(--mu);font-weight:500;letter-spacing:0}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px 18px;margin-top:22px}
+.rgrid .card{color:var(--ink);text-decoration:none;cursor:zoom-in}
+.rgrid .card small{color:var(--mu)}
+@media (max-width:1000px){.rgrid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.rgrid{grid-template-columns:1fr 1fr;gap:20px 12px}.rgrid .card h3{font-size:.95rem}.card .ph{clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%)}}
+.older{columns:3;column-gap:30px;margin-top:18px;padding:0;list-style:none}
+.older li{padding:5px 0 5px 22px;position:relative;break-inside:avoid}
+.older li::before{content:"";position:absolute;left:0;top:.62em;width:11px;height:9px;background:var(--gr);clip-path:polygon(0 0,100% 0,50% 100%)}
+@media (max-width:760px){.older{columns:1}}
+/* kontakt */
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(30px,5vw,80px);align-items:start}
+@media (max-width:900px){.cgrid{grid-template-columns:1fr}}
+.cdata dl{margin:0;display:grid;gap:0}
+.cdata dl div{padding:16px 0;border-bottom:1px solid var(--line)}
+.cdata dt{font-size:.9rem;color:var(--mu);margin-bottom:2px}
+.cdata dd{margin:0;font-size:1.25rem;font-weight:700;color:var(--ink)}
+.cdata dd a{text-decoration:none}.cdata dd a:hover{color:var(--gr)}
+form{background:var(--bg2);padding:clamp(22px,3.5vw,40px)}
+form h2{font-size:1.6rem}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media (max-width:560px){.f2{grid-template-columns:1fr}}
+label{display:block;font-weight:600;font-size:.94rem;color:var(--ink);margin:0 0 14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid #C3CBCF;border-radius:0;padding:12px 14px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gr);outline-offset:0;border-color:var(--gr)}
+textarea{min-height:130px;resize:vertical}
+.note{font-size:.88rem;color:var(--mu);margin:12px 0 0}
+.ok{display:none;margin-top:14px;padding:14px 16px;background:#fff;border-left:4px solid var(--gr);font-size:.95rem}
+.map{margin-top:clamp(40px,6vw,70px);height:420px;background:#dfe4e6;position:relative}
+.map iframe{width:100%;height:100%;border:0;display:block}
+.map p{position:absolute;inset:auto 0 0 0;margin:0;padding:12px 20px;font-size:.92rem;color:var(--mu)}
+/* stopka */
+.foot{background:#14181A;color:#A8B2B7;padding:64px 0 26px;font-size:.96rem}
+.foot .logo{color:#fff}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:30px}
+.foot h3{color:#fff;font-size:1rem;margin:4px 0 14px}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{padding:4px 0}
+.foot a{text-decoration:none}.foot a:hover{color:#fff}
+.foot address{font-style:normal;margin-top:16px;line-height:1.7}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-top:44px;padding-top:22px;border-top:1px solid #2A3034;font-size:.88rem}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,12,13,.96);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+.lb.on{display:flex}
+.lb figure{margin:0;max-width:min(1280px,94vw);text-align:center}
+.lb img{max-height:80vh;width:auto;margin:0 auto;user-select:none;-webkit-user-drag:none}
+.lb figcaption{color:#DDE3E6;margin-top:12px;font-size:.98rem}
+.lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;width:56px;height:56px;display:grid;place-items:center}
+.lb .x{top:10px;right:10px;font-size:34px;line-height:1}
+.lb .pv{left:8px;top:50%;transform:translateY(-50%)}.lb .nx{right:8px;top:50%;transform:translateY(-50%)}
+.lb svg{width:26px;height:18px}
+@media (max-width:700px){.lb .pv,.lb .nx{top:auto;bottom:14px;transform:none}}
+:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}</style>
+<script src="app.js" defer></script></head><body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top"><div class="wrap"><a class="logo " href="index.html" aria-label="Holzbau - strona główna"><svg class="mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="#F9931D" d="M0 32h14l14 46H14z"/><path fill="#00876F" d="M22 32h22L33 66z"/><path fill="#F9931D" d="M63 0h14L55 78H41z"/></svg><span>Holzbau</span></a>
+<button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+<nav class="nav" id="nav" aria-label="Menu główne"><a href="drewno-klejone.html">Drewno klejone</a><a href="kladki-mosty-drewniane.html" aria-current=page>Kładki i mosty</a><a href="projekty-konstrukcji.html">Projekty</a><a href="realizacje.html">Realizacje</a><a href="kontakt.html">Kontakt</a><a class="tel-top" href="tel:+48600437476"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.2 1.5l2 3.2-1.4 1.6c.8 1.9 2.3 3.4 4.2 4.2l1.6-1.4 3.2 2-.9 2.9C7.5 14 2 8.5 1.3 2.4z" fill="currentColor"/></svg>600 437 476</a></nav>
+</div></header>
+<main id="tresc"><section class="phero"><img src="img/kladka-w-brodnicy-ii-1.webp" srcset="img/kladka-w-brodnicy-ii-1-s.webp 560w, img/kladka-w-brodnicy-ii-1.webp 1024w" sizes="100vw" width="1024" height="742" alt="Łukowa kładka z drewna klejonego w Brodnicy" fetchpriority="high"><div class="wrap"><div class="crumb"><a href="index.html">Strona główna</a> / Kładki i mosty</div><h1>Kładki drewniane i mosty z drewna klejonego</h1><p>Projektujemy, wykonujemy i montujemy kładki i mosty z drewna klejonego warstwowo o zadanej rozpiętości.</p></div></section>
+<section class="sec"><div class="wrap cols2">
+<div class="prose"><h2>Od projektu fundamentów po montaż przęsła</h2>
+<p>Projektujemy, wykonujemy oraz montujemy kładki drewniane i mosty drewniane z drewna klejonego warstwowo o zadanej rozpiętości. Dla uzyskania niepowtarzalnego efektu obiektu mostowego używamy różnych materiałów: drewna klejonego świerkowego, sosnowego, modrzewiowego oraz drewna egzotycznego.</p>
+<p>Projekty kładek drewnianych wykonujemy kompleksowo, razem z projektem fundamentów oraz łożysk elastomerowych.</p></div>
+<div><h2>Współpraca</h2><ul class="tri">
+<li>Współpracujemy z projektantami kładek i mostów drewnianych oraz z wykonawcami tych obiektów.</li>
+<li>Oferujemy doradztwo techniczne na etapie koncepcji i projektu.</li>
+<li>Mamy duży zasób gotowych projektów kładek i mostów z drewna klejonego.</li>
+<li>Drewno: świerk, sosna, modrzew, gatunki egzotyczne.</li></ul>
+<a class="btn" href="kontakt.html">Zapytaj o kładkę <svg class="arrow" viewBox="0 0 18 12" aria-hidden="true"><path d="M0 6h15M10 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div>
+</div></section>
+<section class="sec grey"><div class="wrap"><h2>Nasze kładki i mosty</h2><p>Kładka w Bytomiu, Port w Iławie, Kładka w Brodnicy II, Kładka dla pieszych w Gryficach, Kładka w Brodnicy, Kładka w Żmigrodzie.</p><div class="gal" data-set="[[&quot;img/kladka-w-bytomiu-0.webp&quot;, 1024, 418, &quot;K\u0142adka w Bytomiu&quot;], [&quot;img/kladka-w-bytomiu-1.webp&quot;, 1024, 768, &quot;K\u0142adka w Bytomiu&quot;], [&quot;img/kladka-w-bytomiu-2.webp&quot;, 1024, 768, &quot;K\u0142adka w Bytomiu&quot;], [&quot;img/kladka-w-bytomiu-3.webp&quot;, 1024, 644, &quot;K\u0142adka w Bytomiu&quot;], [&quot;img/port-w-ilawie-0.webp&quot;, 1024, 549, &quot;Port w I\u0142awie&quot;], [&quot;img/port-w-ilawie-1.webp&quot;, 1082, 585, &quot;Port w I\u0142awie&quot;], [&quot;img/port-w-ilawie-2.webp&quot;, 545, 437, &quot;Port w I\u0142awie&quot;], [&quot;img/port-w-ilawie-3.webp&quot;, 1024, 510, &quot;Port w I\u0142awie&quot;], [&quot;img/kladka-w-brodnicy-ii-0.webp&quot;, 1024, 692, &quot;K\u0142adka w Brodnicy II&quot;], [&quot;img/kladka-w-brodnicy-ii-1.webp&quot;, 1024, 742, &quot;K\u0142adka w Brodnicy II&quot;], [&quot;img/kladka-w-brodnicy-ii-2.webp&quot;, 1024, 457, &quot;K\u0142adka w Brodnicy II&quot;], [&quot;img/kladka-w-brodnicy-ii-3.webp&quot;, 1024, 429, &quot;K\u0142adka w Brodnicy II&quot;], [&quot;img/kladka-dla-pieszych-w-gryficach-0.webp&quot;, 500, 375, &quot;K\u0142adka dla pieszych w Gryficach&quot;], [&quot;img/kladka-dla-pieszych-w-gryficach-1.webp&quot;, 500, 375, &quot;K\u0142adka dla pieszych w Gryficach&quot;], [&quot;img/kladka-dla-pieszych-w-gryficach-2.webp&quot;, 500, 375, &quot;K\u0142adka dla pieszych w Gryficach&quot;], [&quot;img/kladka-dla-pieszych-w-gryficach-3.webp&quot;, 500, 375, &quot;K\u0142adka dla pieszych w Gryficach&quot;], [&quot;img/kladka-w-brodnicy-0.webp&quot;, 1280, 719, &quot;K\u0142adka w Brodnicy&quot;], [&quot;img/kladka-w-brodnicy-1.webp&quot;, 1280, 719, &quot;K\u0142adka w Brodnicy&quot;], [&quot;img/kladka-w-brodnicy-2.webp&quot;, 1280, 719, &quot;K\u0142adka w Brodnicy&quot;], [&quot;img/kladka-w-brodnicy-3.webp&quot;, 1280, 719, &quot;K\u0142adka w Brodnicy&quot;], [&quot;img/kladka-w-zmigrodzie-0.webp&quot;, 500, 375, &quot;K\u0142adka w \u017bmigrodzie&quot;], [&quot;img/kladka-w-zmigrodzie-1.webp&quot;, 500, 375, &quot;K\u0142adka w \u017bmigrodzie&quot;], [&quot;img/kladka-w-zmigrodzie-2.webp&quot;, 500, 329, &quot;K\u0142adka w \u017bmigrodzie&quot;], [&quot;img/kladka-w-zmigrodzie-3.webp&quot;, 500, 375, &quot;K\u0142adka w \u017bmigrodzie&quot;]]"><a href="img/kladka-w-bytomiu-0.webp" data-i="0"><img src="img/kladka-w-bytomiu-0-s.webp" width="560" height="229" alt="Kładka w Bytomiu" loading=lazy decoding=async></a><a href="img/kladka-w-bytomiu-1.webp" data-i="1"><img src="img/kladka-w-bytomiu-1-s.webp" width="560" height="420" alt="Kładka w Bytomiu" loading=lazy decoding=async></a><a href="img/kladka-w-bytomiu-2.webp" data-i="2"><img src="img/kladka-w-bytomiu-2-s.webp" width="560" height="420" alt="Kładka w Bytomiu" loading=lazy decoding=async></a><a href="img/kladka-w-bytomiu-3.webp" data-i="3"><img src="img/kladka-w-bytomiu-3-s.webp" width="560" height="352" alt="Kładka w Bytomiu" loading=lazy decoding=async></a><a href="img/port-w-ilawie-0.webp" data-i="4"><img src="img/port-w-ilawie-0-s.webp" width="560" height="300" alt="Port w Iławie" loading=lazy decoding=async></a><a href="img/port-w-ilawie-1.webp" data-i="5"><img src="img/port-w-ilawie-1-s.webp" width="560" height="303" alt="Port w Iławie" loading=lazy decoding=async></a><a href="img/port-w-ilawie-2.webp" data-i="6"><img src="img/port-w-ilawie-2-s.webp" width="560" height="449" alt="Port w Iławie" loading=lazy decoding=async></a><a href="img/port-w-ilawie-3.webp" data-i="7"><img src="img/port-w-ilawie-3-s.webp" width="560" height="279" alt="Port w Iławie" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-ii-0.webp" data-i="8"><img src="img/kladka-w-brodnicy-ii-0-s.webp" width="560" height="378" alt="Kładka w Brodnicy II" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-ii-1.webp" data-i="9"><img src="img/kladka-w-brodnicy-ii-1-s.webp" width="560" height="406" alt="Kładka w Brodnicy II" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-ii-2.webp" data-i="10"><img src="img/kladka-w-brodnicy-ii-2-s.webp" width="560" height="250" alt="Kładka w Brodnicy II" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-ii-3.webp" data-i="11"><img src="img/kladka-w-brodnicy-ii-3-s.webp" width="560" height="235" alt="Kładka w Brodnicy II" loading=lazy decoding=async></a><a href="img/kladka-dla-pieszych-w-gryficach-0.webp" data-i="12"><img src="img/kladka-dla-pieszych-w-gryficach-0-s.webp" width="560" height="420" alt="Kładka dla pieszych w Gryficach" loading=lazy decoding=async></a><a href="img/kladka-dla-pieszych-w-gryficach-1.webp" data-i="13"><img src="img/kladka-dla-pieszych-w-gryficach-1-s.webp" width="560" height="420" alt="Kładka dla pieszych w Gryficach" loading=lazy decoding=async></a><a href="img/kladka-dla-pieszych-w-gryficach-2.webp" data-i="14"><img src="img/kladka-dla-pieszych-w-gryficach-2-s.webp" width="560" height="420" alt="Kładka dla pieszych w Gryficach" loading=lazy decoding=async></a><a href="img/kladka-dla-pieszych-w-gryficach-3.webp" data-i="15"><img src="img/kladka-dla-pieszych-w-gryficach-3-s.webp" width="560" height="420" alt="Kładka dla pieszych w Gryficach" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-0.webp" data-i="16"><img src="img/kladka-w-brodnicy-0-s.webp" width="560" height="315" alt="Kładka w Brodnicy" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-1.webp" data-i="17"><img src="img/kladka-w-brodnicy-1-s.webp" width="560" height="315" alt="Kładka w Brodnicy" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-2.webp" data-i="18"><img src="img/kladka-w-brodnicy-2-s.webp" width="560" height="315" alt="Kładka w Brodnicy" loading=lazy decoding=async></a><a href="img/kladka-w-brodnicy-3.webp" data-i="19"><img src="img/kladka-w-brodnicy-3-s.webp" width="560" height="315" alt="Kładka w Brodnicy" loading=lazy decoding=async></a><a href="img/kladka-w-zmigrodzie-0.webp" data-i="20"><img src="img/kladka-w-zmigrodzie-0-s.webp" width="560" height="420" alt="Kładka w Żmigrodzie" loading=lazy decoding=async></a><a href="img/kladka-w-zmigrodzie-1.webp" data-i="21"><img src="img/kladka-w-zmigrodzie-1-s.webp" width="560" height="420" alt="Kładka w Żmigrodzie" loading=lazy decoding=async></a><a href="img/kladka-w-zmigrodzie-2.webp" data-i="22"><img src="img/kladka-w-zmigrodzie-2-s.webp" width="560" height="368" alt="Kładka w Żmigrodzie" loading=lazy decoding=async></a><a href="img/kladka-w-zmigrodzie-3.webp" data-i="23"><img src="img/kladka-w-zmigrodzie-3-s.webp" width="560" height="420" alt="Kładka w Żmigrodzie" loading=lazy decoding=async></a></div></div></section>
+</main>
+<footer class="foot"><div class="wrap"><div class="fgrid">
+<div><a class="logo " href="index.html" aria-label="Holzbau - strona główna"><svg class="mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="#F9931D" d="M0 32h14l14 46H14z"/><path fill="#00876F" d="M22 32h22L33 66z"/><path fill="#F9931D" d="M63 0h14L55 78H41z"/></svg><span>Holzbau</span></a><address>Holzbau<br>ul. Wylotowa 198<br>66-446 Ciecierzyce</address></div>
+<div><h3>Oferta</h3><ul><li><a href="drewno-klejone.html">Drewno klejone</a></li><li><a href="kladki-mosty-drewniane.html">Kładki i mosty drewniane</a></li><li><a href="projekty-konstrukcji.html">Projekty konstrukcji</a></li><li><a href="realizacje.html">Realizacje</a></li></ul></div>
+<div><h3>Telefon</h3><ul><li>Biuro: <a href="tel:+48501206101">501 206 101</a></li><li>Konstruktor: <a href="tel:+48600437476">600 437 476</a></li><li><a href="https://www.facebook.com/Holzbau-1409136342680496/" rel="noopener">Facebook</a></li></ul></div>
+<div><h3>E-mail</h3><ul><li><a href="mailto:biuro@holzbau.pl">biuro@holzbau.pl</a></li><li><a href="kontakt.html">Formularz zapytania</a></li></ul></div>
+</div><div class="fbot"><span>© 2026 Holzbau. Konstrukcje z drewna klejonego.</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=holzbau.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div></div></footer>
+<div class="lb" role="dialog" aria-modal="true" aria-label="Galeria zdjęć"><button class="x" aria-label="Zamknij">×</button><button class="pv" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 18 12" aria-hidden="true"><path d="M18 6H3M8 1L3 6l5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button><figure><img alt=""><figcaption></figcaption></figure><button class="nx" aria-label="Następne zdjęcie"><svg viewBox="0 0 18 12" aria-hidden="true"><path d="M0 6h15M10 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button></div>
+</body></html>
