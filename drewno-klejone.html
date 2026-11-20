@@ -2,7 +2,7 @@
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Drewno klejone, konstrukcje z drewna klejonego warstwowo | Holzbau</title><meta name="description" content="Drewno klejone warstwowo GL24, GL28, GL30. Dźwigary proste i łukowe do hal, basenów, pawilonów i kładek. Projekt, dostawa i montaż - Holzbau."><meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#ffffff"><link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/archivo-rdzen.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/archivo-pl.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" as="image" href="img/oferta-drewno-klejone-m-2.webp" imagesrcset="img/oferta-drewno-klejone-m-2-s.webp 560w, img/oferta-drewno-klejone-m-2.webp 1024w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" href="fonts/archivo-rdzen.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/archivo-pl.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" as="image" href="img/oferta-drewno-klejone-m-2.webp" fetchpriority="high">
 <style>@font-face{font-family:"Archivo";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/archivo-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2026}
 @font-face{font-family:"Archivo";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/archivo-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
 @font-face{font-family:"Archivo-fb";src:local("Arial");size-adjust:102%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
@@ -55,26 +55,39 @@ p{margin:0 0 1em}
 .arrow{width:18px;height:12px;flex:none}
 .tlink{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:600;font-size:1.05rem;padding:12px 2px}
 .tlink b{font-weight:700;font-size:1.2rem}
-/* hero */
-.hero{position:relative;color:#fff;background:#2a2620;display:flex;align-items:flex-end;min-height:calc(100svh - 72px);clip-path:polygon(0 0,100% 0,100% calc(100% - 70px),calc(100% - 26px) 100%,0 100%)}
-.hero>img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(13,15,16,.62) 0%,rgba(13,15,16,.25) 55%,rgba(13,15,16,0) 80%),linear-gradient(0deg,rgba(13,15,16,.9) 0%,rgba(13,15,16,.6) 38%,rgba(13,15,16,.12) 72%,rgba(13,15,16,0) 100%)}
-.hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:64px}
-.hero h1{color:#fff;font-size:clamp(2rem,4.6vw,3.9rem);max-width:17ch;margin-bottom:20px;letter-spacing:-.025em}
-.hero .lead{font-size:clamp(1.04rem,1.4vw,1.22rem);max-width:44ch;color:rgba(255,255,255,.9);margin-bottom:30px}
+/* hero: tło marki + ostre zdjęcia w natywnej wielkości (nigdy nie rozciągamy) */
+.hero{position:relative;color:#fff;background:#1B2023;overflow:hidden;display:flex;align-items:center;min-height:calc(100svh - 72px);clip-path:polygon(0 0,100% 0,100% calc(100% - 64px),calc(100% - 24px) 100%,0 100%)}
+.vbg{position:absolute;z-index:0;right:-6%;bottom:-8%;height:116%;width:auto;opacity:.22;pointer-events:none}
+.hgrid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 560px;gap:clamp(36px,5vw,80px);align-items:center;width:100%;padding-top:56px;padding-bottom:84px}
+.hero h1{color:#fff;font-size:clamp(2rem,3.7vw,3.5rem);max-width:16ch;margin-bottom:20px;letter-spacing:-.025em}
+.hero .lead{font-size:clamp(1.04rem,1.3vw,1.2rem);max-width:44ch;color:#D3DADE;margin-bottom:30px}
 .hero .acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px}
-.hero .cap{position:absolute;z-index:2;right:40px;bottom:28px;font-size:.86rem;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:8px}
-.hero .cap .mark{width:16px;height:16px}
+.hcol{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px}
+.hcol figure{margin:0;position:relative}
+.hcol img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:#2b3236}
+.hcol .big{grid-column:1/-1;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%)}
+.hcol .big img{border-bottom:6px solid var(--or);border-image:linear-gradient(90deg,var(--or) 0 38%,#2b3236 38% 100%) 1}
+.hcol .sm:last-child{clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+.hcol figcaption{font-size:.84rem;color:#9FAAB0;margin-top:8px;line-height:1.35}
+@media (max-width:1100px){.hgrid{grid-template-columns:minmax(0,1fr) 460px}}
+@media (min-width:1800px){.hgrid{grid-template-columns:minmax(0,1fr) 620px}.hcol{max-width:620px}.hero h1{font-size:3.8rem}}
+@media (min-width:861px) and (max-height:840px){.hgrid{grid-template-columns:minmax(0,1fr) 450px;padding-top:34px;padding-bottom:72px}.hcol{gap:10px}.hcol figcaption{margin-top:5px}}
 @media (max-width:960px){.hero{min-height:calc(100svh - 64px)}}
-@media (max-width:700px){
- .hero{clip-path:polygon(0 0,100% 0,100% calc(100% - 40px),calc(100% - 15px) 100%,0 100%)}
- .hero>img{object-position:50% 20%}
- .hero::before{background:linear-gradient(0deg,rgba(13,15,16,.94) 0%,rgba(13,15,16,.8) 45%,rgba(13,15,16,.25) 78%,rgba(13,15,16,.1) 100%)}
- .hero .wrap{padding-top:90px;padding-bottom:62px}
- .hero h1{font-size:clamp(1.85rem,8.4vw,2.4rem);margin-bottom:14px}
- .hero .lead{margin-bottom:24px;font-size:1rem}
+@media (max-width:860px){
+ .hero{display:flex;flex-direction:column;min-height:calc(100svh - 64px);clip-path:polygon(0 0,100% 0,100% calc(100% - 36px),calc(100% - 14px) 100%,0 100%)}
+ .hgrid{display:flex;flex-direction:column;flex:1;gap:0;padding:0 0 60px}
+ .htxt{flex:1;display:flex;flex-direction:column;justify-content:center}
+ .hcol{order:-1;max-width:none;display:block}
+ .hcol .sm{display:none}
+ .hcol .big{clip-path:none}
+ .hcol .big img{border-bottom-width:5px}
+ .hcol .big img{aspect-ratio:auto;height:min(36svh,66vw);max-height:420px}
+ .hcol .big figcaption{position:absolute;right:10px;bottom:10px;margin:0;background:rgba(27,32,35,.82);color:#E3E8EA;padding:3px 8px;font-size:.74rem}
+ .htxt{padding:26px 20px 0}
+ .hero h1{font-size:clamp(1.8rem,8vw,2.4rem);margin-bottom:14px}
+ .hero .lead{margin-bottom:28px;font-size:1rem}
  .hero .acts{gap:6px 22px}
- .hero .cap{right:auto;left:20px;bottom:18px;font-size:.78rem}
+ .vbg{height:62%;right:-90px;bottom:-30px;opacity:.28}
 }
 /* belka - separator z motywem logo */
 .beam{display:block;height:10px;width:120px;margin:0 0 26px;background:linear-gradient(90deg,var(--or) 0 58%,transparent 58% 66%,var(--gr) 66% 100%);clip-path:polygon(4px 0,100% 0,calc(100% - 4px) 100%,0 100%)}
@@ -102,7 +115,7 @@ section{position:relative}
 @media (max-width:560px){.scope{grid-template-columns:1fr}}
 /* kafle oferty */
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
-.tile{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;color:#fff;text-decoration:none;background:#333;clip-path:polygon(0 0,calc(100% - 36px) 0,100% 36px,100% 100%,0 100%)}
+.tile{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;color:#fff;text-decoration:none;background:#333;clip-path:polygon(0 0,calc(100% - 36px) 0,100% 36px,100% 100%,0 100%)}
 .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .tile:hover img{transform:scale(1.04)}
 .tile::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(0deg,rgba(12,14,15,.88) 0%,rgba(12,14,15,.35) 50%,rgba(12,14,15,0) 75%)}
@@ -110,7 +123,7 @@ section{position:relative}
 .tile h3{color:#fff;font-size:1.5rem;margin-bottom:8px}
 .tile p{font-size:.97rem;color:rgba(255,255,255,.88);margin:0 0 14px}
 .tile .go{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--or)}
-@media (max-width:900px){.tiles{grid-template-columns:1fr}.tile{aspect-ratio:16/11}}
+@media (max-width:900px){.tiles{grid-template-columns:1fr}}
 /* ciemna sekcja realizacji */
 .dark{background:var(--ink);color:#C9D0D4}
 .dark h2{color:#fff}
@@ -154,14 +167,16 @@ section{position:relative}
 .person b{font-size:1.3rem;white-space:nowrap}
 @media (max-width:860px){.cta{grid-template-columns:1fr}}
 @media (max-width:420px){.person{flex-direction:column;align-items:flex-start;gap:2px}}
-/* podstrony */
-.phero{position:relative;color:#fff;background:#2a2620;min-height:clamp(320px,46vh,480px);display:flex;align-items:flex-end;clip-path:polygon(0 0,100% 0,100% calc(100% - 50px),calc(100% - 19px) 100%,0 100%)}
-.phero>img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover}
-.phero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(13,15,16,.9) 0%,rgba(13,15,16,.5) 55%,rgba(13,15,16,.15) 100%)}
-.phero .wrap{position:relative;z-index:2;width:100%;padding-top:80px;padding-bottom:58px}
-.phero h1{color:#fff;font-size:clamp(1.9rem,4vw,3.3rem);max-width:22ch;margin-bottom:12px}
-.phero p{max-width:56ch;color:rgba(255,255,255,.9);margin:0;font-size:1.06rem}
-.crumb{font-size:.88rem;color:rgba(255,255,255,.75);margin-bottom:14px}
+/* podstrony: pasek marki + zdjęcie w ramce, max natywna wielkość */
+.phero{position:relative;color:#fff;background:#1B2023;overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - 44px),calc(100% - 17px) 100%,0 100%)}
+.phero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 500px;gap:clamp(30px,5vw,72px);align-items:center;padding-top:48px;padding-bottom:70px}
+.phero figure{margin:0;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%)}
+.phero figure img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#2b3236}
+.phero h1{color:#fff;font-size:clamp(1.9rem,3.4vw,3rem);max-width:22ch;margin-bottom:12px}
+.phero p{max-width:56ch;color:#D3DADE;margin:0;font-size:1.06rem}
+@media (max-width:1000px){.phero .wrap{grid-template-columns:minmax(0,1fr) 400px}}
+@media (max-width:860px){.phero .wrap{grid-template-columns:1fr;padding:0 0 52px;gap:0}.phero figure{order:-1;clip-path:none}.phero figure img{aspect-ratio:auto;height:min(30svh,56vw)}.phero .ptxt{padding:22px 20px 0}}
+.crumb{font-size:.88rem;color:#9FAAB0;margin-bottom:14px}
 .crumb a{text-decoration:none}.crumb a:hover{text-decoration:underline}
 .prose{max-width:70ch}
 .prose p{font-size:1.06rem}
@@ -252,7 +267,7 @@ textarea{min-height:130px;resize:vertical}
 <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
 <nav class="nav" id="nav" aria-label="Menu główne"><a href="drewno-klejone.html" aria-current=page>Drewno klejone</a><a href="kladki-mosty-drewniane.html">Kładki i mosty</a><a href="projekty-konstrukcji.html">Projekty</a><a href="realizacje.html">Realizacje</a><a href="kontakt.html">Kontakt</a><a class="tel-top" href="tel:+48600437476"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.2 1.5l2 3.2-1.4 1.6c.8 1.9 2.3 3.4 4.2 4.2l1.6-1.4 3.2 2-.9 2.9C7.5 14 2 8.5 1.3 2.4z" fill="currentColor"/></svg>600 437 476</a></nav>
 </div></header>
-<main id="tresc"><section class="phero"><img src="img/oferta-drewno-klejone-m-2.webp" srcset="img/oferta-drewno-klejone-m-2-s.webp 560w, img/oferta-drewno-klejone-m-2.webp 1024w" sizes="100vw" width="1024" height="486" alt="Łukowe dźwigary z drewna klejonego nad halą" fetchpriority="high"><div class="wrap"><div class="crumb"><a href="index.html">Strona główna</a> / Drewno klejone</div><h1>Drewno klejone i konstrukcje z drewna klejonego warstwowo</h1><p>Dźwigary proste i łukowe do hal sportowych, basenów, pawilonów handlowych i wystawowych, wież, masztów, mostów i kładek.</p></div></section>
+<main id="tresc"><section class="phero"><div class="wrap"><div class="ptxt"><div class="crumb"><a href="index.html">Strona główna</a> / Drewno klejone</div><h1>Drewno klejone i konstrukcje z drewna klejonego warstwowo</h1><p>Dźwigary proste i łukowe do hal sportowych, basenów, pawilonów handlowych i wystawowych, wież, masztów, mostów i kładek.</p></div><figure><img src="img/oferta-drewno-klejone-m-2.webp" width="1024" height="486" alt="Łukowe dźwigary z drewna klejonego nad halą" fetchpriority="high"></figure></div></section>
 <section class="sec"><div class="wrap cols2">
 <div class="prose"><h2>Lekki materiał do dużych rozpiętości</h2>
 <p>Elementy z drewna klejonego warstwowo stosuje się w konstrukcjach inżynierskich o różnym przeznaczeniu: w halach sportowych, basenach, pawilonach handlowych i wystawowych, wieżach, masztach, mostach i kładkach dla pieszych.</p>
@@ -269,7 +284,7 @@ textarea{min-height:130px;resize:vertical}
 </ul>
 <a class="btn" href="kontakt.html">Zapytaj o wycenę <svg class="arrow" viewBox="0 0 18 12" aria-hidden="true"><path d="M0 6h15M10 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div>
 </div></section>
-<section class="sec grey"><div class="wrap"><h2>Konstrukcje z drewna klejonego w naszych obiektach</h2><div class="gal" data-set="[[&quot;img/oferta-drewno-klejone-1.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-2.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-3.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-4.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-5.webp&quot;, 637, 915, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-6.webp&quot;, 877, 449, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-7.webp&quot;, 1198, 848, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-8.webp&quot;, 671, 421, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-9.webp&quot;, 1024, 430, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-10.webp&quot;, 1024, 420, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-11.webp&quot;, 1024, 413, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-12.webp&quot;, 1024, 691, &quot;Konstrukcja z drewna klejonego warstwowo&quot;]]"><a href="img/oferta-drewno-klejone-1.webp" data-i="0"><img src="img/oferta-drewno-klejone-1-s.webp" width="560" height="420" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-2.webp" data-i="1"><img src="img/oferta-drewno-klejone-2-s.webp" width="560" height="420" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-3.webp" data-i="2"><img src="img/oferta-drewno-klejone-3-s.webp" width="560" height="420" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-4.webp" data-i="3"><img src="img/oferta-drewno-klejone-4-s.webp" width="560" height="420" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-5.webp" data-i="4"><img src="img/oferta-drewno-klejone-5-s.webp" width="560" height="804" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-6.webp" data-i="5"><img src="img/oferta-drewno-klejone-6-s.webp" width="560" height="287" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-7.webp" data-i="6"><img src="img/oferta-drewno-klejone-7-s.webp" width="560" height="396" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-8.webp" data-i="7"><img src="img/oferta-drewno-klejone-8-s.webp" width="560" height="351" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-9.webp" data-i="8"><img src="img/oferta-drewno-klejone-9-s.webp" width="560" height="235" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-10.webp" data-i="9"><img src="img/oferta-drewno-klejone-10-s.webp" width="560" height="230" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-11.webp" data-i="10"><img src="img/oferta-drewno-klejone-11-s.webp" width="560" height="226" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-12.webp" data-i="11"><img src="img/oferta-drewno-klejone-12-s.webp" width="560" height="378" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a></div></div></section>
+<section class="sec grey"><div class="wrap"><h2>Konstrukcje z drewna klejonego w naszych obiektach</h2><div class="gal" data-set="[[&quot;img/oferta-drewno-klejone-1.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-2.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-3.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-4.webp&quot;, 800, 600, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-5.webp&quot;, 637, 915, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-6.webp&quot;, 877, 449, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-7.webp&quot;, 1198, 848, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-8.webp&quot;, 671, 421, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-9.webp&quot;, 1024, 430, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-10.webp&quot;, 1024, 420, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-11.webp&quot;, 1024, 413, &quot;Konstrukcja z drewna klejonego warstwowo&quot;], [&quot;img/oferta-drewno-klejone-12.webp&quot;, 1024, 691, &quot;Konstrukcja z drewna klejonego warstwowo&quot;]]"><a href="img/oferta-drewno-klejone-1.webp" data-i="0"><img src="img/oferta-drewno-klejone-1-s.webp" width="720" height="540" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-2.webp" data-i="1"><img src="img/oferta-drewno-klejone-2-s.webp" width="720" height="540" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-3.webp" data-i="2"><img src="img/oferta-drewno-klejone-3-s.webp" width="720" height="540" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-4.webp" data-i="3"><img src="img/oferta-drewno-klejone-4-s.webp" width="720" height="540" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-5.webp" data-i="4"><img src="img/oferta-drewno-klejone-5-s.webp" width="637" height="478" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-6.webp" data-i="5"><img src="img/oferta-drewno-klejone-6-s.webp" width="599" height="449" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-7.webp" data-i="6"><img src="img/oferta-drewno-klejone-7-s.webp" width="720" height="540" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-8.webp" data-i="7"><img src="img/oferta-drewno-klejone-8-s.webp" width="561" height="421" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-9.webp" data-i="8"><img src="img/oferta-drewno-klejone-9-s.webp" width="573" height="430" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-10.webp" data-i="9"><img src="img/oferta-drewno-klejone-10-s.webp" width="560" height="420" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-11.webp" data-i="10"><img src="img/oferta-drewno-klejone-11-s.webp" width="551" height="413" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a><a href="img/oferta-drewno-klejone-12.webp" data-i="11"><img src="img/oferta-drewno-klejone-12-s.webp" width="720" height="540" alt="Konstrukcja z drewna klejonego warstwowo" loading=lazy decoding=async></a></div></div></section>
 </main>
 <footer class="foot"><div class="wrap"><div class="fgrid">
 <div><a class="logo " href="index.html" aria-label="Holzbau - strona główna"><svg class="mark" viewBox="0 0 80 80" aria-hidden="true"><path fill="#F9931D" d="M0 32h14l14 46H14z"/><path fill="#00876F" d="M22 32h22L33 66z"/><path fill="#F9931D" d="M63 0h14L55 78H41z"/></svg><span>Holzbau</span></a><address>Holzbau<br>ul. Wylotowa 198<br>66-446 Ciecierzyce</address></div>
